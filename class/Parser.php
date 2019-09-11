@@ -42,7 +42,7 @@ class Parser extends DB
 			// проверка кол-ва квартир
 			if($flat_count<=7)
 			{
-				$url = 'https://lenspecsmu.ru/ajax/search/getFlats.php?object%5B%5D='.$complex_id.'&now=0&next=7&more=20&sortType=&sortDirection=&city=1&type=1&price%5Bmin%5D=2.7&price%5Bmax%5D=71.3&area%5Bmin%5D=0.0&area%5Bmax%5D=286.3&floor%5Bmin%5D=1&floor%5Bmax%5D=25&kitchenArea%5Bmin%5D=0.0&kitchenArea%5Bmax%5D=40.0&group=1';
+				$url = 'https://lenspecsmu.ru/ajax/search/getFlats.php?object%5B%5D='.$complex_id.'&now=0&next=false&more=20&sortType=&sortDirection=&city=1&type=1&price%5Bmin%5D=2.7&price%5Bmax%5D=71.3&area%5Bmin%5D=0.0&area%5Bmax%5D=286.3&floor%5Bmin%5D=1&floor%5Bmax%5D=25&kitchenArea%5Bmin%5D=0.0&kitchenArea%5Bmax%5D=40.0&group=1';
 				self::addFlat($url,$complex_id,$x);
 				$requests .=  'запрос https://lenspecsmu.ru/ajax/search/getFlats.php?object%5B%5D='.$complex_id.'&now=0&next=7 [total flats = '.$flat_count.']<br>';
 			}
